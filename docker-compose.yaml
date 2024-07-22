@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+  pipecat:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pipecat
+    volumes:
+      - .:/home/user/app
+    # working_dir: /home/user/app/src
+    ports:
+      - 8300:7860
